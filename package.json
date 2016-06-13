@@ -1,0 +1,15 @@
+{
+  "name": "ccremix",
+  "version": "1.0.0",
+  "description": "The Cognitive Merchandiser and Buyer",
+  "main": "index.js",
+  "dependencies": {
+    "watson-developer-cloud": "^1.9.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
