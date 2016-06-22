@@ -1,1 +1,2 @@
-# CognitiveMerchandiser
+# Cognitive Merchandiser
+
