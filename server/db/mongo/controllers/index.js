@@ -1,9 +1,10 @@
-import topics from './topics';
-import users from './users';
+import topics from './topics'
+import users from './users'
+import persona from './persona'
 
-export { topics, users };
+export { topics, users, persona }
 
 export default {
   topics,
-  users
-};
+  users,
+persona}
