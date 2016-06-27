@@ -6,7 +6,7 @@
         "mocha": true
     },
  "parserOptions": {
-        "ecmaVersion": 6,
+        "ecmaVersion": 6
         "sourceType": "module",
         "ecmaFeatures": {
             "forOf": true,
@@ -17,6 +17,7 @@
     },
     "rules": {
         "comma-dangle": 0,
+        semi: [2, "never"],
         "indent": 0,
         "react/prop-types": 0,
         "react/jsx-indent-props" : 0,

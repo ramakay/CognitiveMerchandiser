@@ -1,6 +1,7 @@
 /**
  * Routes for express app
  */
+var bodyParser = require('body-parser')
 import passport from 'passport'
 import unsupportedMessage from '../db/unsupportedMessage'
 import { controllers, passport as passportConfig } from '../db'
@@ -56,9 +57,13 @@ export default (app) => {
 
   // topic routes
   if (personaController) {
-    app.get('/persona', personaController.input)
-    app.post('/persona/process', personaController.process)
-    app.get('/persona/result', personaController.result)
+    app.use(bodyParser.urlencoded({
+      extended: true
+    }))
+    app.use(bodyParser.text())
+    app.post('/persona/process', personaController.processWatsonRequest)
+    app.get('/persona/result', personaController.resultWatsonRequest)
+    app.get('/fetchStatus', personaController.fetchStatus)
   } else {
     console.warn(unsupportedMessage('Persona routes'))
   }

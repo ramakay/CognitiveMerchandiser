@@ -11,7 +11,9 @@ import classNames from 'classnames/bind';
 import EntryBox from 'components/EntryBox';
 import MainSection from 'components/MainSection';
 import Scoreboard from 'components/Scoreboard';
-import { fetchWatsonStatus } from 'actions/persona';
+import { fetchWatsonStatus,fetchInsight,typing } from 'actions/persona';
+import { createTopic, incrementCount,
+  decrementCount, destroyTopic, fetchTopics } from 'actions/topics';
 import styles from 'css/components/vote';
 
 const cx = classNames.bind(styles);
@@ -20,31 +22,43 @@ class Persona extends Component {
 
   //Data that needs to be called before rendering the component
   //This is used for server side rending via the fetchComponentDataBeforeRender() method
-  static need = [  // eslinit-disable-line
+  static need = [  // eslint-disable-line
     fetchWatsonStatus
   ]
 
   render() {
-    const {fetchWatsonStatus} = this.props;
+    const {fetchWatsonStatus,status,newTopic, topics, typing, createTopic,fetchInsight} = this.props;
+        //const {newTopic, topics, typing, createTopic, destroyTopic, incrementCount, decrementCount } = this.props;
+
     return (
+      <div className={cx('Persona')}>
+   <span class="status" >{status}</span>
       <div className={cx('vote')}>
-   fetchWatsonStatus
+        <EntryBox topic={newTopic}
+         onEntryChange={typing}
+          onEntrySave={fetchInsight} />
       </div>
+   
+      </div>
+
+
+   
     ); 
   }
 }
 
 Persona.propTypes = {
-  fetchWatsonStatus: PropTypes.string
+  fetchWatsonStatus: PropTypes.func.isRequired,
+  submissionText:PropTypes.string
 };
 
 function mapStateToProps(state) {
   return {
-    topics: state.topic.topics,
-    newTopic: state.topic.newTopic
-  };
+    status:state.persona.status,
+    submissionText:state.persona.submissionText
+      };
 }
 
 // Read more about where to place `connect` here:
 // https://github.com/rackt/react-redux/issues/75#issuecomment-135436563
-export default connect(mapStateToProps, { fetchWatsonStatus })(Persona);
+export default connect(mapStateToProps, {fetchWatsonStatus,typing,fetchInsight })(Persona);

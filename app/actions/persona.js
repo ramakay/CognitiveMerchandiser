@@ -17,21 +17,62 @@ polyfill()
  * @param String endpoint
  * @return Promise
  */
-export function makePersonaRequest (method, id, data, api = '/persona/process') {
+export function makeContentRequest (method, id, data, api = '/persona/process') {
   return request[method](api + (id ? ('/' + id) : ''), data)
 }
 
-export function fetchWatsonStatusSuccess (data) {
-  console.log(data)
-}
 export function fetchWatsonFailure (id, error) {
+  console.log('Fetch watson watson Failure', id, error)
+
+  return {
+    type: types.GET_WATSON_STATUS_FAILURE
+  }
+}
+export function fetchWatsonStatusSuccess (data) {
+  console.log('DATA>>>', data)
+  return {
+    type: types.GET_WATSON_STATUS_SUCCESS,
+    payload: data
+  }
+}
+export function typing (text) {
+  return {
+    type: types.TYPING,
+    content: text
+  }
+}
+export function createInsightSuccess (responseData) {
+  return {
+    type: types.CREATE_INSIGHT,
+    response: responseData
+  }
+}
+export function createInsightFailure (responseData) {
+  return {
+    type: types.CREATE_INSIGHT,
+    response: responseData
+  }
+}
+
+export function fetchInsight (text) {
+  console.log('in fetchInsight', text)
+  return dispatch => {
+    return makeContentRequest('post', '', {inputText: text}, '/persona/process')
+      .then(
+        (response) => dispatch(createInsightSuccess(response.data))
+    )
+      .catch((e) => dispatch(createInsightFailure({ errobj: e,error: "Oops! Something went wrong and we couldn't create Persona"})))
+  }
 }
 
 export function fetchWatsonStatus () {
+  console.log('in getWatsonStatus')
   return dispatch => {
-    return makeTopicRequest('get', id, {
-    })
-      .then(() => dispatch(fetchWatsonStatusSuccess(data)))
-      .catch(() => dispatch(fetchWatsonFailure({id, error: "Oops! Something went wrong and we couldn't create Persona"})))
+    return makeContentRequest('get', '', 'default', '/fetchStatus')
+      .then(
+        (response) => dispatch(fetchWatsonStatusSuccess(response.data))
+
+    )
+      .catch((e) => dispatch(fetchWatsonFailure({ errobj: e,error: "Oops! Something went wrong and we couldn't create Persona"})))
   }
 }
