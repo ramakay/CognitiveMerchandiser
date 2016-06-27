@@ -21,7 +21,8 @@ _Each persona represents a significant portion of people in the real world and e
 
 ## The solution
 
-A Cognitive layer is proposed on top of everything else, it caters to *One* 
+```A Cognitive layer is proposed on top of everything else, it caters to *One* and can operate on multiple concepts simultaneously and can scale at will.```
+
 
 The Cognitive App  is considered a succcess if:
 * It takes in a plainly worded but Intent oriented persona and returns a cognitive set of characteristics which will be used as a training set.
