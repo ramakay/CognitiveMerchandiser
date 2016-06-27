@@ -13,7 +13,10 @@ export default class TopicTextInput extends Component {
    * used in different ways. I personally think this makes it more reusable.
    */
   onSave() {
-    const { onEntrySave, value } = this.props;
+    // console.log("TEXTBOX VAL",this.refs.myInput.value)
+    const { onEntrySave } = this.props;
+    let value= value ? value: this.refs.myInput.value
+
     onEntrySave(value);
   }
 
@@ -31,19 +34,27 @@ export default class TopicTextInput extends Component {
    */
   onKeyDown(event) {
     if (event.keyCode === ENTER_KEY_CODE) {
+
       this.onSave();
     }
   }
 
   render() {
     const { className, placeholder, value } = this.props;
+    const btnSave='btnSave'
     return (
-      <input className={className}
+      <div>
+      <div><input ref="myInput" className={className}
         placeholder={placeholder}
         onChange={this.onChange}
         onKeyDown={this.onKeyDown}
         value={value}
         autoFocus />
+        </div>
+        <div>
+     <input type="button" className={btnSave}  value="save" onClick={this.onSave} />
+      </div>
+      </div>
     );
   }
 }
