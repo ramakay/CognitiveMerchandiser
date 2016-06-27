@@ -8,22 +8,29 @@ Over $4.3 Trillion dollars worth of merchandise was left in checkout pages in 20
 
 Top reasons are shipping costs but also _I was just browsing_ The Retail experience wasn't able to complete a sale because of two reasons that I am Hypothesising
 
-## Broken experiences
+## Out of touch experience creation processes.
 * User experience as well as persona's are getting built much prior to the actual application development.
 * Once created , Designers draw based on these and leave.
-* Implemented UX does not go through iteration and causes huge 
+* Implemented UX Personas are captured generically, sample this quote:
+
+_Each persona represents a significant portion of people in the real world and enables the designer to focus on a manageable and memorable cast of characters, instead of focusing on thousands of individuals. Personas aid designers to create different designs for different kinds of people and to design for a specific somebody, rather than a generic everybody_ 
+(https://www.smashingmagazine.com/2014/08/a-closer-look-at-personas-part-1/)
 
 ## Overload of Digital Marketing tools
-![alt text](http://cdn.chiefmartec.com/wp-content/uploads/2016/03/marketing_technology_landscape_2016_3000px.jpg "Logo Title Text 1")
+![Chief Martec 2016 Map](http://cdn.chiefmartec.com/wp-content/uploads/2016/03/marketing_technology_landscape_2016_3000px.jpg)
 
-##Operation
+## The solution
+
+A Cognitive layer is proposed on top of everything else, it caters to *One* 
+
 The Cognitive App  is considered a succcess if:
-* It takes in a plainly worded but Intent oriented persona and returns a cognitive set of characteristics which will be used to crawl the system.
+* It takes in a plainly worded but Intent oriented persona and returns a cognitive set of characteristics which will be used as a training set.
 * The visual recognition API learns Catalog and Maps intents ( A Retailer sample in a catalog.js is checked in `data` folder)
 * The _Relationship Extractor_ ML API retreives and matches information between the Persona and the Catalog.
-* User supplies a search result say _White Jacket_
+* User supplies a search result say _White Jacket_, a NLP system undertands that White is a color and Jacket is in the Catalog matched to the _Alpha Male_
 * System matches and returns all white jackets as a page on the Site
 * This page was not defined anywhere.. The page components are automatically merged in and user experience components chosen accordingly.
+* YMMV: The App should then attempt to Title this page and fetch potentially a related article.
 
 ##Key Technologies used
 * `watson developer cloud`
