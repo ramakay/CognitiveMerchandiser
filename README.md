@@ -1,8 +1,20 @@
 # Cognitive Merchandiser
 The Cognitive Merchandiser is a reference application built on the following Premise:
 
-## Uncaught Intents and Unstructured Web-experiences
-While the former is an issue with Intents not being captured properly and responed to, the latter is the solution for the 
+## Hypothesis: Uncaught Intents and Unstructured Web-experiences
+While the former is an issue with Intents not being captured properly and responed to, the latter is the solution for the problem. 
+
+Over $4.3 Trillion dollars worth of merchandise was left in checkout pages in 2014 ( http://www.businessinsider.com/heres-how-retailers-can-reduce-shopping-cart-abandonment-and-recoup-billions-of-dollars-in-lost-sales-2014-4)
+
+Top reasons are shipping costs but also _I was just browsing_ The Retail experience wasn't able to complete a sale because of two reasons that I am Hypothesising
+
+## Broken experiences
+* User experience as well as persona's are getting built much prior to the actual application development.
+* Once created , Designers draw based on these and leave.
+* Implemented UX does not go through iteration and causes huge 
+
+## Overload of Digital Marketing tools
+![alt text](http://cdn.chiefmartec.com/wp-content/uploads/2016/03/marketing_technology_landscape_2016_3000px.jpg "Logo Title Text 1")
 
 ##Operation
 The Cognitive App  is considered a succcess if:
