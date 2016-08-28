@@ -1,9 +1,13 @@
 // input, process, result
 var watson = require('watson-developer-cloud')
+var MongoClient = require('mongodb').MongoClient
+var assert = require('assert')
+var ObjectId = require('mongodb').ObjectID
+var url = 'mongodb://localhost/ReactWebpackNode'
 
 var personality_insights = watson.personality_insights({
-  username: '2e0ea521-cb95-4dc8-8490-75801cdc7243',
-  password: 'DJ7iRNWEjlTb',
+  username: 'd98a4bc0-8c3a-423c-9921-44257ec6e26b',
+  password: 'hzCRQbO8nUbA',
   version: 'v2'
 })
 
@@ -23,18 +27,29 @@ export function processWatsonRequest (req, res, next) {
   var obj = JSON.parse(' {"contentItems": [' + req.body.inputText + ']}')
   // obj.content = inputText
   obj.contenttype = 'text/plain'
-  console.log(obj)
-  JSON.stringify(obj)
 
   doWatsonRequest(obj)
 }
 export function doWatsonRequest (theText) {
   personality_insights.profile(theText, function (error, response) {
-    console.log(response, theText)
-    if (error)
+    // console.log(response, theText)
+    if (error) {
       console.log('error:', error)
-    else
-      console.log(JSON.stringify(response, null, 2))
+    } else {
+      var personalityInsightsResults = JSON.stringify(response, null, 2)
+      console.log(personalityInsightsResults)
+      MongoClient.connect(url, function (err, db) {
+        // Get the collection
+        var col = db.collection('personalityInsightsCollection')
+        col.insertOne({personalityInsightsResults}, function (err, r) {
+          assert.equal(null, err)
+          assert.equal(1, r.insertedCount)
+          // Finish up test
+          console.log(col.findOne())
+          db.close()
+        })
+      })
+    }
   }
   )
 }
