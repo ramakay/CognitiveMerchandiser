@@ -9,6 +9,7 @@ import { controllers, passport as passportConfig } from '../db'
 const usersController = controllers && controllers.users
 const topicsController = controllers && controllers.topics
 const personaController = controllers && controllers.persona
+const productController = controllers && controllers.products
 
 export default (app) => {
   // user routes
@@ -66,5 +67,10 @@ export default (app) => {
     app.get('/fetchStatus', personaController.fetchStatus)
   } else {
     console.warn(unsupportedMessage('Persona routes'))
+  }
+  if (productController) {
+    app.get('/productData', productController.fetchProducts)
+  } else {
+    console.warn(unsupportedMessage('topics routes'))
   }
 }
