@@ -16,7 +16,10 @@ class Products extends Component {
 
   render() {
     return (
+      <div>
  <Grid elements="elements"> </Grid> 
+ </div>
+ <div> Hello </div>
     );
   }
 }

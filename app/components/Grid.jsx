@@ -1,38 +1,39 @@
-
 import React, { Component, PropTypes } from 'react';
 import Packery from 'react-packery-component';
 
-export default class TopicTextInput extends Component {
+export default class Grid extends Component {
   constructor(props) {
+    // this.transitionDuration = 0;
  super(props);
+
 }
-}
-var packeryOptions = {
-    transitionDuration: 0
-};
-var Grid = React.createClass({
-    render: function () {
-        var childElements = this.props.elements.map(function(element){
-           return (
-                <li className="image-element-class">
+
+    render () {
+        return (
+        //     this.props.elements.map(function(element){
+        //    return (
+        //         <li className="image-element-class">
+        //             <img src={element.src} />
+        //         </li>
+        //     );
+        // }
+        <div> <li className="image-element-class">
                     <img src={element.src} />
                 </li>
-            );
-        });
-
-        return (
-            <Packery
-                className={'my-gallery-class'} // default ''
+            <Packery className={'my-gallery-class'} // default ''
                 elementType={'ul'} // default 'div'
                 options={packeryOptions} // default {}
                 disableImagesLoaded={false} // default false
             >
                 {childElements}
             </Packery>
+        </div>
         );
-    }
-});
-
-export default class Grid {};
     
+    };
+}
+Grid.propTypes = {
+    element: PropTypes.array.isRequired,
+    elementType:PropTypes.string
+}
 
