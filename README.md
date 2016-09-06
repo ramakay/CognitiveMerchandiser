@@ -56,7 +56,6 @@ Right now in its Pre-alpha stage, all it does is the ability to input a brand br
 
 A Sample _AlphaMale.md_ exists in the app folder. 
 
-*Issue:* The watson service currently returns `undefined` for a request to provide personality insights.
 
 
 
