@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames/bind';
 import { fetchProducts } from 'actions/products';
-
-
+import {Grid}  from 'components/Grid'
+ 
 // const cx2 = classNames.bind(styles);
 
 class Products extends Component {
@@ -16,20 +16,18 @@ class Products extends Component {
 
   render() {
     return (
-      <div> Hello
-      </div>
+ <Grid elements="elements"> </Grid> 
     );
   }
 }
 
 Products.propTypes = {
- 
+ elements:PropTypes.array
 };
 
 function mapStateToProps(state) {
   return {
-    topics: state.topic.topics,
-    newTopic: state.topic.newTopic
+      elements: state.products.elements
   };
 }
 

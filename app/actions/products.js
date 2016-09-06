@@ -21,10 +21,29 @@ export function makeProductRequest (method, id, data, api = '/productData') {
   return request[method](api + (id ? ('/' + id) : ''), data)
 }
 
-// Fetch posts logic
-export function fetchProducts () {
+export function fetchProductSuccess (data) {
+  console.log('Fetch Product Success >>>>>>', data)
+
   return {
-    type: types.GET_PRODUCT_DATA,
-    promise: makeProductRequest('get')
+    type: types.GET_PRODUCT_DATA_SUCCESS,
+    elements: data
+  }
+}
+export function fetchWatsonFailure (id, error) {
+  console.log('Fetch Product Failure', id, error)
+
+  return {
+    type: types.GET_PRODUCT_DATA_FAILURE
+  }
+}
+// Fetch Products logic
+export function fetchProducts () {
+  console.log('Fetching product data')
+  return dispatch => {
+    return makeProductRequest('get', '', '', '/productData')
+      .then(
+        (response) => dispatch(fetchProductSuccess(response.data))
+    )
+      .catch((e) => dispatch(fetchProductFailure({ errobj: e,error: "Oops! Something went wrong and we couldn't create Persona"})))
   }
 }
