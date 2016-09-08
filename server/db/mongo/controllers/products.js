@@ -8,16 +8,16 @@ export function fetchProducts (req, res) {
   // console.log('in FETCHPRODUCTS', Products.find({products: { $regex: /[0-9]/}}))
   // Products.find({products: { $regex: /[0-9]/}}).limit(5).exec((err, products) => {
   // {"products":1, "_id":0} 
-  Products.find({}, {products: { $slice: 2 },_id: 0}).limit(5).exec((err, products) => {
+  Products.find({}, {products: { $slice: 2 },_id: 0}).limit(25).exec((err, products) => {
     if (err) {
       console.log('Error in first query', err)
       return res.status(500).send('Something went wrong getting the data')
     } else {
       var finalProducts = []
       for (var i = products.length - 1; i >= 0; i--) {
-        if (i < 5) finalProducts.push(products[i])
+        if (i < 25) finalProducts.push(products[i])
       }
-      console.log(finalProducts)
+    //   console.log(finalProducts)
     }
     return res.json(products)
   })

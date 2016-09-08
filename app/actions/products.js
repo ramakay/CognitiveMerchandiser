@@ -22,7 +22,7 @@ export function makeProductRequest (method, id, data, api = '/productData') {
 }
 
 export function fetchProductSuccess (data) {
-  console.log('Fetch Product Success >>>>>>', data)
+  // console.log('Fetch Product Success >>>>>>', data)
 
   return {
     type: types.GET_PRODUCT_DATA_SUCCESS,

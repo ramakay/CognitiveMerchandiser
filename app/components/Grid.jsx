@@ -1,39 +1,46 @@
 import React, { Component, PropTypes } from 'react';
-import Packery from 'react-packery-component';
+import {react-packery-component) from 'react-packery-component';
 
-export default class Grid extends Component {
-  constructor(props) {
-    // this.transitionDuration = 0;
- super(props);
+var packeryOptions = {
+  transitionDuration: 0
+};
 
-}
-
-    render () {
+var Grid = React.createClass({
+  render: function() {
+    const {elems } = this.props;
+    {
+      this.props.elems.map(function(element) {
+        console.log(element)
         return (
-        //     this.props.elements.map(function(element){
-        //    return (
-        //         <li className="image-element-class">
-        //             <img src={element.src} />
-        //         </li>
-        //     );
-        // }
-        <div> <li className="image-element-class">
-                    <img src={element.src} />
+          <li className="image-element-class">
+                    <img src={element.name} />
                 </li>
-            <Packery className={'my-gallery-class'} // default ''
-                elementType={'ul'} // default 'div'
-                options={packeryOptions} // default {}
-                disableImagesLoaded={false} // default false
-            >
-                {childElements}
-            </Packery>
-        </div>
-        );
-    
-    };
-}
-Grid.propTypes = {
-    element: PropTypes.array.isRequired,
-    elementType:PropTypes.string
-}
+          );
+      })
+    }
 
+    // var childElements = this.props.elements.map(function(element){
+    //    return (
+    //         <li className="image-element-class">
+    //             <img src={element.src} />
+    //         </li>
+    //     );
+    // });
+
+    // return (
+    //   <Packery
+    //   className={'my-gallery-class'} // default ''
+    //   elementType={'ul'} // default 'div'
+    //   options={packeryOptions} // default {}
+    //   disableImagesLoaded={false} // default false
+    //   >
+    //             {childElements}
+    //         </Packery>
+    //   );
+  }
+});
+
+Grid.propTypes = {
+ elems: PropTypes.array.isRequired
+};
+module.exports = Grid;
