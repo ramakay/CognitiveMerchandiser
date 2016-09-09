@@ -4,7 +4,7 @@ export default function products (state = {src: []} , action) {
   console.log('IN REDUCER')
   switch (action.type) {
     case GET_PRODUCT_DATA_SUCCESS:
-      console.log('action..', action.elements)
+      // console.log('action..', action.elements)
       return Object.assign({}, state, {
         elements: action.elements
       })

@@ -1,46 +1,43 @@
-import React, { Component, PropTypes } from 'react';
-import {react-packery-component) from 'react-packery-component';
+import React, { PropTypes } from 'react';
+import classNames from 'classnames/bind';
+
+var Packery = require('react-packery-component')(React);
+
+import styles from 'css/components/grid';
+const cx = classNames.bind(styles);
 
 var packeryOptions = {
-  transitionDuration: 0
+  transitionDuration: 5
 };
-
-var Grid = React.createClass({
-  render: function() {
-    const {elems } = this.props;
-    {
-      this.props.elems.map(function(element) {
-        console.log(element)
-        return (
-          <li className="image-element-class">
-                    <img src={element.name} />
+const Grid = ({elems}) => {
+  const childElements = elems.map((element, i) => {
+    console.log("ELEMENT", element)
+    var tileVariations = element.colors[0].split("|")[2];
+    var imgSrc = i === 4 ? "http://www.ralphlauren.com/graphics/product_images/pPOLO2-" + tileVariations + "_standard_t940.jpg" : "http://www.ralphlauren.com/graphics/product_images/pPOLO2-" + tileVariations + "_lifestyle_t240.jpg"
+    console.log(imgSrc)
+    return (
+      <li key={i} className={cx('productTile')}>
+                    <img key={i} src={imgSrc} />
                 </li>
-          );
-      })
-    }
-
-    // var childElements = this.props.elements.map(function(element){
-    //    return (
-    //         <li className="image-element-class">
-    //             <img src={element.src} />
-    //         </li>
-    //     );
-    // });
-
-    // return (
-    //   <Packery
-    //   className={'my-gallery-class'} // default ''
-    //   elementType={'ul'} // default 'div'
-    //   options={packeryOptions} // default {}
-    //   disableImagesLoaded={false} // default false
-    //   >
-    //             {childElements}
-    //         </Packery>
-    //   );
-  }
-});
+      );
+  });
+  return (
+    <Packery
+    className={'my-gallery-class'} // default ''
+    elementType={'ul'} // default 'div'
+    options={packeryOptions} // default {}
+    disableImagesLoaded={false} // default false
+    >
+                {childElements}
+            </Packery>
+    );
+};
 
 Grid.propTypes = {
- elems: PropTypes.array.isRequired
+  elems: PropTypes.array
 };
-module.exports = Grid;
+
+
+
+export default Grid;
+

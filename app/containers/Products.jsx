@@ -2,8 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames/bind';
 import { fetchProducts } from 'actions/products';
-// import Grid from 'ship-components-grid';
-// console.log(Grid)
+import Grid from 'components/Grid';
+
+
+
+console.log(Grid)
 // const cx2 = classNames.bind(styles);
 
 class Products extends Component {
@@ -18,18 +21,19 @@ class Products extends Component {
         const {elems } = this.props;
 
     return (
-      <div>
+      // <div>
 
-      <div>
-<ul>
-{this.props.elems.map(function(tile,i){
-  return <li  key={i}>{tile.name}</li>;
-})}
-</ul> </div>
- <div> 
-    
- </div>  
- </div>
+//       <div>
+// <ul>
+
+// {this.props.elems.map(function(tile,i){
+//   var tileVariations = tile.colors[0].split("|")[2];
+//   return <li  key={i}><img src={"http://www.ralphlauren.com/graphics/product_images/pPOLO2-"+tileVariations+"_lifestyle_t240.jpg"} /> {tile.name}</li>;
+// })}
+// </ul> </div>
+ // <div> 
+    <Grid elems={elems} />
+
     );
   }
 }
@@ -39,7 +43,6 @@ Products.propTypes = {
 };
 
 function mapStateToProps(state) {
-  console.log(typeof state.products.elements)
   return {
       elems: state.products.elements
   };
