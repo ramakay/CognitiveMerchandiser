@@ -8,6 +8,8 @@ import LoginOrRegister from 'containers/LoginOrRegister';
 import Dashboard from 'containers/Dashboard';
 import Persona from 'containers/Persona';
 import Products from 'containers/Products'
+import SearchEngine from 'containers/SearchEngine'
+
 
 
 /*
@@ -44,6 +46,8 @@ export default (store) => {
       <Route path="about" component={About} />
        <Route path="Persona" component={Persona} />
        <Route path="Products" component={Products} />
+              <Route path="Search" component={SearchEngine} />
+
 
     </Route>
   );

@@ -13,6 +13,7 @@ const Grid = ({elems}) => {
   const childElements = elems.map((element, i) => {
     console.log("ELEMENT", element)
     var tileVariations = element.colors[0].split("|")[2];
+    // This varies based on action.
     var imgSrc = i === 4 ? "http://www.ralphlauren.com/graphics/product_images/pPOLO2-" + tileVariations + "_standard_t940.jpg" : "http://www.ralphlauren.com/graphics/product_images/pPOLO2-" + tileVariations + "_lifestyle_t240.jpg"
     console.log(imgSrc)
     return (
