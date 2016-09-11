@@ -19,8 +19,20 @@ const About = () => {
 </video>
 </div>
 <div className={cx('messageTitle')}>
-            <h2> <a href="#start"> Can Cognition help with your next sale? </a> </h2>
-</div>
+<div className={cx('sentence-wrapper')} >
+                <h2 className={cx('sentence')}>
+                    <div className={cx('words-1')}>
+                    <a href="#start">
+                        <span>Can Cognition help with your next sale?</span>
+                        <span>Can Interfaces be built by themselves?</span>
+                        <span>Will ethnographic Research lead to Cognitive Systems? </span>
+                        <span>Can you train customers through Reinforcement learning?</span>
+                        <span>Click to find out!</span>
+                        
+                        </a>
+                    </div>
+                </h2>
+            </div></div>
 
       </div>
           <div className={cx('bodyText')}>
@@ -66,11 +78,12 @@ When you visit a website you are interacting with a piece of work that is create
   <li>Dynamic Interface components that influence not only layout but component behavior based on the input fro the Reinforcement learning module. </li>
 </ul>
 
-<p>Of these, the Reference implementation currently demonstrates </p>
+
+<h3>The Marketer</h3>
 <ul>
-  <li>Brand Brief - To establish the base set of Personality Attributes based </li>
-  <li>Search – The start of an incoming Natural Language Classifier that tries to guess intents.</li>
-  <li>Product Pages – That show behavior ( Scaled product tiles using a Masonry Layout ) based on incoming reinforcement learning input.</li>
+  <li>Validates the brief produced by the experience </li>
+  <li>Monitors Sale and scores Cognitive patterns that lead to sales. Roadmap Item:</li>
+  <li>Watches realtime as the Merchandiser provides Recommendation - Roadmap Item: </li>
 </ul>
 
 

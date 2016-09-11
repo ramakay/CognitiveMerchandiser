@@ -14,7 +14,8 @@ import Scoreboard from 'components/Scoreboard';
 import { fetchWatsonStatus,fetchInsight,typing } from 'actions/persona';
 import { createTopic, incrementCount,
   decrementCount, destroyTopic, fetchTopics } from 'actions/topics';
-import styles from 'css/components/vote';
+import styles from 'css/components/persona';
+import SampleBrief from 'components/SampleBrief';
 
 const cx = classNames.bind(styles);
 
@@ -32,12 +33,15 @@ class Persona extends Component {
 
     return (
       <div className={cx('Persona')}>
+
    <span class="status" >{status}</span>
       <div className={cx('vote')}>
         <EntryBox topic={newTopic}
          onEntryChange={typing}
           onEntrySave={fetchInsight} />
       </div>
+     <SampleBrief />
+
    
       </div>
 

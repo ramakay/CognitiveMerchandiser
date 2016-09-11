@@ -1,0 +1,11 @@
+
+.sampleBrief{
+	height:600px;
+	overflow-y:scroll;
+	composes: bodyText from '../common/layout';
+font-size:12px;
+}
+.Persona {
+		composes: bodyText from '../common/layout';
+
+}
