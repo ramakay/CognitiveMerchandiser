@@ -1,11 +1,11 @@
 // input, process, result
+import { db } from '../constants'
 var watson = require('watson-developer-cloud')
 var MongoClient = require('mongodb').MongoClient
 var assert = require('assert')
 var ObjectId = require('mongodb').ObjectID
-var url = 'mongodb://localhost/ReactWebpackNode'
+var url = db
 var mongoose = require('mongoose')
-var db = mongoose.createConnection(url)
 var jsonQuery = require('json-query')
 
 var Schema = mongoose.Schema,

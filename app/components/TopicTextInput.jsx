@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 const ENTER_KEY_CODE = 13;
 
 export default class TopicTextInput extends Component {
-  constructor(props) {
+  constructor(props) { 
     super(props);
     this.onSave = this.onSave.bind(this);
     this.onChange = this.onChange.bind(this);

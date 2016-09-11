@@ -1,8 +1,8 @@
 {
-  "name": "react-webpack-node",
-  "version": "1.7.14",
-  "description": "A simple Node.js app using Express 4 with Webpack, React, alt, ImmutableJS",
-  "repository": "https://github.com/choonkending/react-webpack-node",
+  "name": "The-Cognitive-Merchandiser",
+  "version": "1.0.0",
+  "description": "Merchandising and Interface Possibilities with Cognition",
+  "repository": "https://github.com/ramakay/CognitiveMerchandiser",
   "main": "index.js",
   "browser": {
     "vertx": false
@@ -23,7 +23,7 @@
     "test:watch": "cross-env NODE_ENV=test npm test -- --watch --no-single-run",
     "postinstall": "npm run build"
   },
-  "author": "Choon Ken Ding",
+  "author": "Rmaakrishnan Annaswamy",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^2.8.0",
