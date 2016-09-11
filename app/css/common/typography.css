@@ -4,11 +4,14 @@
 @value comfortaa: 'Comfortaa', cursive;;
 
 .heading {
-  font-family: comfortaa;
+  font-family: notosans;
   font-size: 28px;
   font-weight: 700;
 
   line-height: 48px;
+}
+h3,p {
+  font-family:notosans !important;
 }
 
 .subheading {
