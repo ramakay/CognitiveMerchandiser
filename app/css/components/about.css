@@ -6,7 +6,7 @@
 .description {
   composes: normal from '../common/typography';
   width:100vw;
-height:100%;
+height:100vh;
 }
 
 .description video {
@@ -51,7 +51,6 @@ height:100%;
 .bodyText{
 	background:#fff;
 	width:100vw;
-	height:100vh;
 	position:relative;
 	padding:2.5rem;
 }
@@ -72,23 +71,16 @@ height:100%;
 	width:100vh;
 	background:#f3f3f3;
 }
-h3.graf--startsWithDoubleQuote {
-    text-indent: -.415em;
-}
-.graf--h3 {
+
+.headingQuoteLine {
+	composes: heading from '../common/typography';
     margin-top: 53px;
-}
-.graf--h3 {
-    font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    font-style: italic;
+    color:hsla(0, 0%, 80%, 1);
     font-size: 32px;
     margin-left: -2px;
     line-height: 1.15;
     letter-spacing: -.02em;
-}
-.graf--h2, .graf--h3, .graf--h4 {
-    color: rgba(0,0,0,.8);
 }
 
 

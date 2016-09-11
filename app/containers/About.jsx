@@ -15,11 +15,12 @@ const About = () => {
       <div className={cx('description')}>
     <div className={cx('shade')}>        
       <video muted autoPlay  poster="http://res.cloudinary.com/drjw5ga79/video/upload/v1473470889/My_Movie_torstp.jpg">
-  <source src="http://res.cloudinary.com/drjw5ga79/video/upload/v1473470889/My_Movie_torstp.mp4" type="video/mp4"/>
+  <source src="http://res.cloudinary.com/drjw5ga79/video/upload/vc_auto/v1473470889/My_Movie_torstp.mp4" type="video/mp4"/>
 </video>
 </div>
+<div className={cx('messageTitle')}>
             <h2> <a href="#start"> Can Cognition help with your next sale? </a> </h2>
-
+</div>
 
       </div>
           <div className={cx('bodyText')}>
@@ -43,7 +44,7 @@ We “Personalize” certain aspects of the experience as a programmatic system 
 When you visit a website you are interacting with a piece of work that is created weeks if not months in advance with assumptions around the users interacting with them - The rules are definite and cannot be broken.
 </section>
 <section>
-<h1>A Proposed model to map real-time user intents to probabilistic user interface elements.</h1>
+<blockquote >A Proposed model to map real-time user intents to probabilistic user interface elements.</blockquote>
 
 <h2> A Reference implementation </h2>
 <p> The Cognitive merchandiser works on the premise that Digital experiences whether implemented as a retail storefront or a content based website can all work on the basis of cognition. </p>
