@@ -1,3 +1,4 @@
+![Build Status](https://api.travis-ci.org/ramakay/CognitiveMerchandiser.svg)
 # Cognitive Merchandiser
 The Cognitive Merchandiser is a reference application built on the following Premise:
 
