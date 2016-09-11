@@ -6,31 +6,34 @@
 .description {
   composes: normal from '../common/typography';
   width:100vw;
-height:100%;
-overflow:hidden;
+height:100vh;
 }
 
 .description video {
-    position: absolute;
+    /*position: absolute;
     left: 50%;
     min-width: 100vw;
     width: auto;
     z-index: 0;
     margin-top:40px;
-    top:350px;
+    top:300px;
     min-height:100vh;
     height:100%;
+        object-fit: cover;
+
     transform: translateX(-50%) translateY(-42%);
  background: url('http://res.cloudinary.com/drjw5ga79/video/upload/v1473470889/My_Movie_torstp.jpg') no-repeat;
   background-size: cover;
-  transition: 1s opacity;
+  transition: 1s opacity;*/
+   width: 100vw; /* Could also use width: 100%; */
+    height: 100vh;
+    object-fit: cover;
+    position: absolute; /* Change position to absolute if you don't want it to take up the whole page */
+    left: 0px;
+    top: 0px;
+    z-index: 0w;
 }
-@media (min-width: 1900px) {
-.description video {
-    width:2500px;
-    height:2500px;
-  }
-}
+
 .contribute {
   composes: small from '../common/typography';
 }
@@ -43,7 +46,7 @@ overflow:hidden;
     height:100%;*/
   display: inline-block;
     height: 100%;
-    margin-top:350px;
+    margin-top:50vh;
     width: 100%;
     text-shadow: 2px 2px 7px hsla(0, 12%, 35%, 1);
     font-size:36px;
@@ -88,17 +91,24 @@ section {
 }
 
 .headingQuoteLine {
-	composes: heading from '../common/typography';
+	composes: playfair from '../common/typography';
+    
+    font-family:playfair !important;
     margin:15px 0 15px 0;
     font-style: italic;
     color:hsla(0, 0%, 80%, 1);
-    font-size: 32px;
+    font-size: 48px;
     margin-left: -2px;
     line-height: 1.15;
+    font-family:Playfair;
     letter-spacing: -.02em;
 }
 
 .messageTitle {
   background:hsla(60, 100%, 10%, 0.2);
   float:left;
+  color:red;
+}
+footer {
+	color:#fff;
 }

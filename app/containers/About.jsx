@@ -83,7 +83,7 @@ When you visit a website you are interacting with a piece of work that is create
 
     </div>
     <footer>
-      &copy; 2016 Cognitive Merchandiser
+     finiš  &copy; 2016 Cognitive Merchandiser
     </footer>
   </div>
   );
