@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames/bind';
-
-var Packery = require('react-packery-component')(React);
+ var Packery = require('react-packery-component')(React);
 
 import styles from 'css/components/grid';
 const cx = classNames.bind(styles);
