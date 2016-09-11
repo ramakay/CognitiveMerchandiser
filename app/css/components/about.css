@@ -46,6 +46,10 @@ font-family:comfortaa;
     -o-animation: rotateWord 18s linear infinite 0s;
     -ms-animation: rotateWord 18s linear infinite 0s;
     animation: rotateWord 18s linear infinite 0s;
+
+}
+.words-1 * {
+	min-width:780px;
 }
 .words-1 span:nth-child(2) { 
     -webkit-animation-delay: 3s; 
@@ -180,7 +184,7 @@ height:100vh;
     height: 100%;
     margin-top:50vh;
     width: 100%;
-    text-shadow: 2px 2px 7px hsla(0, 12%, 35%, 1);
+    text-shadow: 6px 6px 6px hsla(0, 12%, 35%, 1);
     font-size:36px;
         transform: translateX(25%) ;
 	min-height:350px;
