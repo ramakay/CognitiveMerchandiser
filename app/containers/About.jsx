@@ -44,9 +44,8 @@ We “Personalize” certain aspects of the experience as a programmatic system 
 When you visit a website you are interacting with a piece of work that is created weeks if not months in advance with assumptions around the users interacting with them - The rules are definite and cannot be broken.
 </section>
 <section>
-<blockquote >A Proposed model to map real-time user intents to probabilistic user interface elements.</blockquote>
+<blockquote >A Proposed model and a Reference Implementation to map real-time user intents to probabilistic user interface elements.</blockquote>
 
-<h2> A Reference implementation </h2>
 <p> The Cognitive merchandiser works on the premise that Digital experiences whether implemented as a retail storefront or a content based website can all work on the basis of cognition. </p>
 
 <p>It proposes change in roles:</p>

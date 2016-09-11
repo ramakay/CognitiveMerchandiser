@@ -60,6 +60,3 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
-.messageTitle {
-  background:hsla(60, 100%, 10%, 0.2);
-}

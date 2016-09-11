@@ -6,7 +6,8 @@
 .description {
   composes: normal from '../common/typography';
   width:100vw;
-height:100vh;
+height:100%;
+overflow:hidden;
 }
 
 .description video {
@@ -17,11 +18,18 @@ height:100vh;
     z-index: 0;
     margin-top:40px;
     top:350px;
+    min-height:100vh;
     height:100%;
     transform: translateX(-50%) translateY(-42%);
  background: url('http://res.cloudinary.com/drjw5ga79/video/upload/v1473470889/My_Movie_torstp.jpg') no-repeat;
   background-size: cover;
   transition: 1s opacity;
+}
+@media (min-width: 1900px) {
+.description video {
+    width:2500px;
+    height:2500px;
+  }
 }
 .contribute {
   composes: small from '../common/typography';
@@ -37,16 +45,20 @@ height:100vh;
     height: 100%;
     margin-top:350px;
     width: 100%;
-    text-shadow: 2px 2px 7px rgba(78, 78, 78, 1);
+    text-shadow: 2px 2px 7px hsla(0, 12%, 35%, 1);
     font-size:36px;
         transform: translateX(25%) ;
 	min-height:350px;
     position:relative;
+font-family:comfortaa;
 
 }
 .description h2:after {
 	background:#000;
 	opacity: 0.5;
+}
+.description h2 a{
+	color:#fff;
 }
 .bodyText{
 	background:#fff;
@@ -62,6 +74,9 @@ height:100vh;
 	width:100vh;
 	background:#3B424C;
 }
+section {
+	margin-top:15px;
+}
 .card-grey h2 {
 	color:#fff;
 }
@@ -74,7 +89,7 @@ height:100vh;
 
 .headingQuoteLine {
 	composes: heading from '../common/typography';
-    margin-top: 53px;
+    margin:15px 0 15px 0;
     font-style: italic;
     color:hsla(0, 0%, 80%, 1);
     font-size: 32px;
@@ -83,4 +98,7 @@ height:100vh;
     letter-spacing: -.02em;
 }
 
-
+.messageTitle {
+  background:hsla(60, 100%, 10%, 0.2);
+  float:left;
+}
