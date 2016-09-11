@@ -18,13 +18,13 @@ const About = () => {
   <source src="http://res.cloudinary.com/drjw5ga79/video/upload/v1473470889/My_Movie_torstp.mp4" type="video/mp4"/>
 </video>
 </div>
-            <h2> Can Cognition help with your next sale? </h2>
+            <h2> <a href="#start"> Can Cognition help with your next sale? </a> </h2>
 
 
       </div>
           <div className={cx('bodyText')}>
-  <section>
-<h3 className={cx('headingQuote')} >      When we develop or merchandise in any Digital experience today, we assume what works based on existing patterns and expertise.  </h3>
+  <section id="start">
+<blockquote >      When we develop or merchandise in any Digital experience today, we assume what works based on existing patterns and expertise.  </blockquote>
 
 <p>This produced work is largely a set of rules categorized as structured web experiences. Furthermore, people developing such experiences (Websites, Web Applications ) may have trained themselves into assuming will follow one of the many user journey’s they have assumed. One example is the prevalence of a secondary "Add to Wishlist" button next to an "Add to Cart" button.
 

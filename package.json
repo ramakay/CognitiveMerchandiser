@@ -23,7 +23,7 @@
     "test:watch": "cross-env NODE_ENV=test npm test -- --watch --no-single-run",
     "postinstall": "npm run build"
   },
-  "author": "Rmaakrishnan Annaswamy",
+  "author": "Rama Annaswamy",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^2.8.0",
@@ -98,6 +98,7 @@
     "invariant": "^2.2.1",
     "isomorphic-fetch": "^2.2.1",
     "json-loader": "^0.5.4",
+    "json-query": "^2.2.0",
     "kerberos": "0.0.21",
     "lodash": "^4.6.1",
     "method-override": "^2.3.5",
