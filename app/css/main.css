@@ -21,3 +21,7 @@ body {
 .productTile {
 	list-style: none;
 }
+footer {
+min-height:500px;
+padding:10px;	
+}
