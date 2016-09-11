@@ -1,0 +1,8 @@
+@value font-medium from '../settings.css';
+
+
+  .productTile {
+    padding: 16px;
+    list-style: none;
+    min-width:240px;
+  }

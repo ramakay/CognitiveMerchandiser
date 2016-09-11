@@ -1,4 +1,4 @@
-@value montserrat from './common/typography.css';
+@value notosans from './common/typography.css';
 
 /*
  * Add any global styles here
@@ -12,11 +12,16 @@ body {
 }
 
 .app {
-  composes: box from './common/layout.css';
-
   height: 100%;
-
-  font-family: montserrat;
+  background: #3B424C;
+  font-family: comfortaa;
   font-weight: normal;
   font-smoothing: antialiased;
+}
+.productTile {
+	list-style: none;
+}
+footer {
+min-height:500px;
+padding:10px;	
 }

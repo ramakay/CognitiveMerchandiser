@@ -5,8 +5,90 @@
 
 .description {
   composes: normal from '../common/typography';
+  width:100vw;
+height:100%;
 }
 
+.description video {
+    position: absolute;
+    left: 50%;
+    min-width: 100vw;
+    width: auto;
+    z-index: 0;
+    margin-top:40px;
+    top:350px;
+    height:100%;
+    transform: translateX(-50%) translateY(-42%);
+ background: url('http://res.cloudinary.com/drjw5ga79/video/upload/v1473470889/My_Movie_torstp.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
 .contribute {
   composes: small from '../common/typography';
 }
+
+.description h2 {
+    color: #F2F2F2;
+  /*position: fixed;
+      top:350px;
+    transform: translateX(50%) translateY(50%);
+    height:100%;*/
+  display: inline-block;
+    height: 100%;
+    margin-top:350px;
+    width: 100%;
+    text-shadow: 2px 2px 7px rgba(78, 78, 78, 1);
+    font-size:36px;
+        transform: translateX(25%) ;
+	min-height:350px;
+    position:relative;
+
+}
+.description h2:after {
+	background:#000;
+	opacity: 0.5;
+}
+.bodyText{
+	background:#fff;
+	width:100vw;
+	height:100vh;
+	position:relative;
+	padding:2.5rem;
+}
+.card-grey {
+	  composes: media-object from '../common/foundation.min';
+
+	border:1px solid #ccc;
+	padding:15px;
+	width:100vh;
+	background:#3B424C;
+}
+.card-grey h2 {
+	color:#fff;
+}
+.card-white {
+	border:1px solid #ccc;
+	padding:15px;
+	width:100vh;
+	background:#f3f3f3;
+}
+h3.graf--startsWithDoubleQuote {
+    text-indent: -.415em;
+}
+.graf--h3 {
+    margin-top: 53px;
+}
+.graf--h3 {
+    font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+    margin-left: -2px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+}
+.graf--h2, .graf--h3, .graf--h4 {
+    color: rgba(0,0,0,.8);
+}
+
+

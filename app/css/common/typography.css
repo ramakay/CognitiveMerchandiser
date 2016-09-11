@@ -1,17 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa|Noto+Sans);
 
-@value montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
+@value notosans: 'Noto Sans', Helvetica, Arial, sans-serif;
+@value comfortaa: 'Comfortaa', cursive;;
 
 .heading {
-  font-family: montserrat;
+  font-family: notosans;
   font-size: 28px;
   font-weight: 700;
 
   line-height: 48px;
 }
+h3,p {
+  font-family:notosans !important;
+}
 
 .subheading {
-  font-family: montserrat;
+  font-family: comfortaa;
   font-size: 21px;
   font-weight: 700;
 
@@ -19,7 +23,7 @@
 }
 
 .normal {
-  font-family: montserrat;
+  font-family: notosans;
   font-size: 16px;
   font-weight: 400;
 
@@ -27,7 +31,7 @@
 }
 
 .small {
-  font-family: montserrat;
+  font-family: notosans;
   font-size: 12px;
   font-weight: 400;
 

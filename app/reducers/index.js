@@ -3,6 +3,7 @@ import user from 'reducers/user'
 import topic from 'reducers/topic'
 import message from 'reducers/message'
 import persona from 'reducers/persona'
+import products from 'reducers/product'
 
 import { routerReducer as routing } from 'react-router-redux'
 
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   topic,
   message,
   routing,
-persona})
+  persona,
+products})
 
 export default rootReducer
