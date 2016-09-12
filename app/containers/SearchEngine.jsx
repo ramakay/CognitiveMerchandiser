@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import { initEntry } from 'actions/search'; 
 import SearchInput from 'components/SearchInput';
 import styles from 'css/components/search';
-
+const cx = classNames.bind(styles);
 
 
 
@@ -20,8 +20,13 @@ class SearchEngine extends Component {
     const {onEntrySearch,initEntry} = this.props;
 
     return (
-<div className="searchBox">
+      <div className={cx('Search')}>
+      <h2>02. Search - Natural Language Processing</h2>
+      <p> We emulate a user visit here, enter a regular search term as you would enter through a search engine and press Save. 
+      </p>
+<div className={cx('Page')}>
       <SearchInput  onEntrySearch={initEntry} />
+</div>
 </div>
       );
   }

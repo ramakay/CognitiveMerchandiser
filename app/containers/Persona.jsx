@@ -41,10 +41,16 @@ constructor(props) {
         //const {newTopic, topics, typing, createTopic, destroyTopic, incrementCount, decrementCount } = this.props;
 
     return (
-      <div className={cx('Persona')}>
-      <h2>Here is where you start r</h2>
+      <div className={cx('Page')}>
 
-   <span className={cx('status')} >{status}</span>
+      <div className={cx('Persona')}>
+      <h2>01. Automated Persona Creation</h2>
+      <p> The User Experience Researcher or an equivalent role identifies a base user group that the application wants to cater to.
+      The System expects free flowing text much like a brand brief that will be narrated to a team member.
+      </p>
+            <div className={cx('Usage')}> A Sample for a Persona "Alpha Male" is provided below, either provide your own 8000 words or copy/paste the below text area and press "Save" </div>
+
+
       <div className={cx('Persona')}>
         <EntryBox topic={newTopic}
          onEntryChange={typing}
@@ -55,6 +61,8 @@ constructor(props) {
      <SampleBrief />
 
      <InsightList data={insightResults}/>
+     <span className={cx('status')}></span>
+      </div>
       </div>
     ); 
   }

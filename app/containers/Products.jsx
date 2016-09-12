@@ -4,6 +4,8 @@ import classNames from 'classnames/bind';
 import { fetchProducts } from 'actions/products';
 import Grid from 'components/Grid';
 import { bindActionCreators } from 'redux'
+import styles from 'css/components/products';
+const cx = classNames.bind(styles);
 
 
 
@@ -21,8 +23,14 @@ class Products extends Component {
     const {elems} = this.props;
 
     return (
-
+      <div className={cx('Page')}>
+     
+            <div className={cx('bodyText')}>
+              <h2>03. Product Grid Display </h2>
+      <p> The System utilizes an existing catalog but highlights only certain items that it is proposing as more appealing to the customer based on a base set of personas or through further interaction </p>
       <Grid elems={elems} />
+      </div>
+      </div>
 
       );
   }

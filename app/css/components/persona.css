@@ -14,3 +14,9 @@ margin:0 auto;
 .InsightResponse {
 	border:1px dotted #ccc;
 }
+.Page {
+	composes: page from '../common/layout';
+}
+.Usage {
+	font-style:italic;
+}

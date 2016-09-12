@@ -1,5 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 const ENTER_KEY_CODE = 13;
+import styles from 'css/components/persona';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
 
 export default class SearchInput extends Component {
   constructor(props) {
@@ -42,7 +45,7 @@ export default class SearchInput extends Component {
     const { className, placeholder, value } = this.props;
     const btnSave='btnSave'
     return (
-      <div>
+      <div className={cx('Page')}>
       <div><input ref="myInput" className={className}
         placeholder={placeholder}
         onChange={this.onChange}

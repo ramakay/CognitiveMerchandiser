@@ -19,10 +19,10 @@ const Navigation = ({ user, logOut }) => {
           className={cx('item', 'logo')}
           activeClassName={cx('active')}>The Cognitive Merchandiser <span className={cx('beta')}>Beta</span></Link>
                                        <Link className={cx('item')} to="/">Start</Link>
-                                                           <Link className={cx('item')} to="/Persona">01.Persona</Link>
+                                                           <Link className={cx('item')} to="/Persona"><sub>01.</sub> Persona</Link>
                     <Link className={cx('item')} to="/Search"><sub>02.</sub>Search</Link>
 
-                                       <a  className={cx('item')} href="/Products">03.Products </a>
+                                       <a  className={cx('item')} href="/Products"><sub>03</sub> Products </a>
       </nav>
 </div>
     );

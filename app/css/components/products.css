@@ -1,6 +1,9 @@
 .Page {
 	composes: page from '../common/layout';
 }
-.Search {
+.Products {
 	margin-top:500px;
+}
+.bodyText{
+	composes: bodyText from '../common/layout'
 }
