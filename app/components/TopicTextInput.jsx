@@ -16,7 +16,6 @@ export default class TopicTextInput extends Component {
     // console.log("TEXTBOX VAL",this.refs.myInput.value)
     const { onEntrySave } = this.props;
     let value= value ? value: this.refs.myInput.value
-
     onEntrySave(value);
   }
 

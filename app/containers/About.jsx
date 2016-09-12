@@ -61,7 +61,10 @@ When you visit a website you are interacting with a piece of work that is create
 <p> The Cognitive merchandiser works on the premise that Digital experiences whether implemented as a retail storefront or a content based website can all work on the basis of cognition. </p>
 
 <p>It proposes change in roles:</p>
-
+<h3>The Consumer</h3>
+<ul>
+  <li>Is training a System to respond to their needs without bias from merchandisers and other humans </li>
+</ul>
 <h3>The User Experience Researcher. </h3>
 <p>The User Experience Researcher or others collecting ethnographic research is essentially creating base training data for a future cognitive system. User experience Research usually helps produce a brief for the user experience. A Base guideline which may contain personas can be added as a base framework for the system. In the reference implementation, it is the Brand Insight section. </p>
 
@@ -85,6 +88,17 @@ When you visit a website you are interacting with a piece of work that is create
   <li>Monitors Sale and scores Cognitive patterns that lead to sales. Roadmap Item:</li>
   <li>Watches realtime as the Merchandiser provides Recommendation - Roadmap Item: </li>
 </ul>
+<h3>The System</h3>
+<ul>
+  <li> Starts as a basic cognitive system with no awareness of surroundings </li>
+  <li> Eventually utilizes Reinforcement learning and strengthens personas to people </li>
+</ul>
+<blockquote >How this Application works </blockquote>
+<ul>
+  <li>Navigate to <a href="/Persona">Persona Definition</a> and provide an Explanation of who you think the target audience is - A Sample is provided . The service returns Personality attributes and confidence levels <strong> This shapes the unknown user experience </strong>  </li>
+  <li>Navigate to <a href="/Search">Search</a> to emulate the role of a customer during an incoming visit - The system accounts for this input and varies the Persona attribute confidence level </li>
+  <li>Navigate to <a href="/Products">Products </a> When arrived direclty, the system assumes the base Persona and proceeds to propose certain products ( Observer any sized up Tiles ) </li>
+</ul>
 
 
 <h3> Where to next and how you can contribute. </h3>
@@ -96,7 +110,7 @@ When you visit a website you are interacting with a piece of work that is create
 
     </div>
     <footer>
-     finiš  &copy; 2016 Cognitive Merchandiser
+     finiš  &copy; 2016 Cognitive Merchandiser <img src="https://api.travis-ci.org/ramakay/CognitiveMerchandiser.svg" />
     </footer>
   </div>
   );

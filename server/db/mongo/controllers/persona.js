@@ -34,7 +34,7 @@ export function processWatsonRequest (req, res, next) {
   // obj.content = inputText
   obj.contenttype = 'text/plain'
 
-  doWatsonRequest(obj)
+  doWatsonRequest(obj, res)
 }
 /**
  * 
@@ -55,7 +55,7 @@ var personalitySchema = new Schema({
   values: Object
 })
 var personalityMongoModel = mongoose.model('personalityMongoModel', personalitySchema)
-export function doWatsonRequest (theText) {
+export function doWatsonRequest (theText, res) {
   personality_insights.profile(theText, function (error, response) {
     // console.log(response, theText)
     if (error) {
@@ -95,6 +95,7 @@ export function doWatsonRequest (theText) {
       var queryOpenness = jsonQuery('personality[][name=Openness]', {data: personalityModelInstance})
       console.warn(queryOpenness.value.percentage)
       console.log('********')
+      res.json(response.tree)
     // console.warn(jsonQuery('personality[][name=Openness]', {data: personalityModelInstance}), needsModelInstance, valuesModelInstance)
     }
   })

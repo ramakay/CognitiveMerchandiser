@@ -16,7 +16,6 @@ export default class SearchInput extends Component {
      console.log(event.target.value)
     const { onEntrySearch } = this.props;
     let value= value ? value: this.refs.myInput.value
-
     onEntrySearch(value);
   }
 
