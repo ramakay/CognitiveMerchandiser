@@ -9,9 +9,8 @@ const cx = classNames.bind(styles);
 
 
 
-
-
 class Products extends Component {
+
 
   //Data that needs to be called before rendering the component
   //This is used for server side rending via the fetchComponentDataBeforeRender() method
@@ -20,6 +19,8 @@ class Products extends Component {
   ]
 
   render() {
+      console.warn("Product JSX CALLED")
+
     const {elems} = this.props;
 
     return (
@@ -37,7 +38,7 @@ class Products extends Component {
 }
 
 Products.propTypes = {
-  elems: PropTypes.array.isRequired
+  elems: PropTypes.array
 };
 
 function mapStateToProps(state) {
@@ -47,9 +48,8 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(fetchProducts, dispatch),
-  }
+  return  bindActionCreators(fetchProducts, dispatch)
+  
 }
 // Read more about where to place `connect` here:
 // https://github.com/rackt/react-redux/issues/75#issuecomment-135436563

@@ -1,16 +1,14 @@
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import React from 'react'
+import { Route, IndexRoute } from 'react-router'
 
-import App from 'containers/App';
-import Vote from 'containers/Vote';
-import About from 'containers/About';
-import LoginOrRegister from 'containers/LoginOrRegister';
-import Dashboard from 'containers/Dashboard';
-import Persona from 'containers/Persona';
+import App from 'containers/App'
+import Vote from 'containers/Vote'
+import About from 'containers/About'
+import LoginOrRegister from 'containers/LoginOrRegister'
+import Dashboard from 'containers/Dashboard'
+import Persona from 'containers/Persona'
 import Products from 'containers/Products'
 import SearchEngine from 'containers/SearchEngine'
-
-
 
 /*
  * @param {Redux Store}
@@ -19,36 +17,34 @@ import SearchEngine from 'containers/SearchEngine'
  */
 export default (store) => {
   const requireAuth = (nextState, replace, callback) => {
-    const { user: { authenticated }} = store.getState();
+    const { user: { authenticated }} = store.getState()
     if (!authenticated) {
       replace({
         pathname: '/login',
         state: { nextPathname: nextState.location.pathname }
-      });
+      })
     }
-    callback();
-  };
+    callback()
+  }
 
   const redirectAuth = (nextState, replace, callback) => {
-    const { user: { authenticated }} = store.getState();
+    const { user: { authenticated }} = store.getState()
     if (authenticated) {
       replace({
         pathname: '/'
-      });
+      })
     }
-    callback();
-  };
+    callback()
+  }
   return (
-    <Route path="/" component={App}>
-      <IndexRoute component={About} />
-      <Route path="login" component={LoginOrRegister} onEnter={redirectAuth} />
-      <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
-      <Route path="about" component={About} />
-       <Route path="Persona" component={Persona} />
-       <Route path="Products" component={Products} />
-              <Route path="Search" component={SearchEngine} />
-
-
-    </Route>
-  );
-};
+  <Route path="/" component={App}>
+    <IndexRoute component={About} />
+    <Route path="login" component={LoginOrRegister} onEnter={redirectAuth} />
+    <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
+    <Route path="about" component={About} />
+    <Route path="Persona" component={Persona} />
+    <Route path="Products" component={Products} />
+    <Route path="Search" component={SearchEngine} />
+  </Route>
+  )
+}

@@ -1,12 +1,10 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import classNames from 'classnames/bind';
-import { initEntry } from 'actions/search'; 
-import SearchInput from 'components/SearchInput';
-import styles from 'css/components/search';
-const cx = classNames.bind(styles);
-
-
+import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+import classNames from 'classnames/bind'
+import { initEntry } from 'actions/search'
+import SearchInput from 'components/SearchInput'
+import styles from 'css/components/search'
+const cx = classNames.bind(styles)
 
 class SearchEngine extends Component {
 
@@ -16,33 +14,32 @@ class SearchEngine extends Component {
   //   fetchProducts
   // ]
 
-  render() {
-    const {onEntrySearch,initEntry} = this.props;
+  render () {
+    const {onEntrySearch, initEntry} = this.props
 
     return (
-      <div className={cx('Search')}>
+    <div className={cx('bodyText')}>
       <h2>02. Search - Natural Language Processing</h2>
-      <p> We emulate a user visit here, enter a regular search term as you would enter through a search engine and press Save. 
+      <p>
+        We emulate a user visit here, enter a regular search term as you would enter through a search engine and press Save.
       </p>
-<div className={cx('Page')}>
-      <SearchInput    onEntrySearch={initEntry} />
-</div>
-</div>
-      );
+      <div className={cx('Page')}>
+        <SearchInput onEntrySearch={initEntry} />
+      </div>
+    </div>
+    )
   }
 }
 
 SearchEngine.propTypes = {
- //onEntrySearch: PropTypes.func.isRequired
-};
+  // onEntrySearch: PropTypes.func.isRequired
+}
 
-
-function mapStateToProps({onEntrySearch}) {
+function mapStateToProps ({onEntrySearch}) {
   return {
-    onEntrySearch
-  };
+  onEntrySearch}
 }
 
 // Read more about where to place `connect` here:
 // https://github.com/rackt/react-redux/issues/75#issuecomment-135436563
-export default connect(mapStateToProps, { initEntry  })(SearchEngine);
+export default connect(mapStateToProps, { initEntry})(SearchEngine)
