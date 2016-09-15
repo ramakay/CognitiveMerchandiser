@@ -10,6 +10,7 @@ const usersController = controllers && controllers.users
 const topicsController = controllers && controllers.topics
 const personaController = controllers && controllers.persona
 const productController = controllers && controllers.products
+const searchController = controllers && controllers.search
 
 export default (app) => {
   // user routes
@@ -72,5 +73,10 @@ export default (app) => {
     app.get('/productData', productController.fetchProducts)
   } else {
     console.warn(unsupportedMessage('topics routes'))
+  }
+  if (searchController) {
+    app.post('/processNLC', searchController.fetchClassification)
+  } else {
+    console.warn(unsupportedMessage('search routes'))
   }
 }

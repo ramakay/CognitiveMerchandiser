@@ -25,7 +25,7 @@ class SearchEngine extends Component {
       <p> We emulate a user visit here, enter a regular search term as you would enter through a search engine and press Save. 
       </p>
 <div className={cx('Page')}>
-      <SearchInput  onEntrySearch={initEntry} />
+      <SearchInput    onEntrySearch={initEntry} />
 </div>
 </div>
       );

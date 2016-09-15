@@ -18,6 +18,7 @@ export default class SearchInput extends Component {
   onSave() {
      console.log(event.target.value)
     const { onEntrySearch } = this.props;
+
     let value= value ? value: this.refs.myInput.value
     onEntrySearch(value);
   }
@@ -46,9 +47,9 @@ export default class SearchInput extends Component {
     const btnSave='btnSave'
     return (
       <div className={cx('Page')}>
+      
       <div><input ref="myInput" className={className}
         placeholder={placeholder}
-        onChange={this.onChange}
         onKeyDown={this.onKeyDown}
         value={value}
         autoFocus />
