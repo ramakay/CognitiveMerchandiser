@@ -42,20 +42,20 @@ export function typing (text) {
   }
 }
 export function createInsightSuccess (responseData) {
+  console.log('Insight received.')
   return {
-    type: types.CREATE_INSIGHT,
+    type: types.CREATE_INSIGHT_SUCCESS,
     response: responseData
   }
 }
 export function createInsightFailure (responseData) {
   return {
-    type: types.CREATE_INSIGHT,
+    type: types.CREATE_INSIGHT_FAILURE,
     response: responseData
   }
 }
 
 export function fetchInsight (text) {
-  console.log('in fetchInsight', text)
   return dispatch => {
     return makeContentRequest('post', '', {inputText: text}, '/persona/process')
       .then(

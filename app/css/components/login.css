@@ -49,7 +49,7 @@
 
   .heading {
     composes: subheading from '../common/typography';
-
+ 
     padding: 16px 12px;
     text-align: center;
   }

@@ -20,7 +20,13 @@ polyfill()
 export function makeProductRequest (method, id, data, api = '/productData') {
   return request[method](api + (id ? ('/' + id) : ''), data)
 }
-
+export function initEntrySuccess (data, keywordData, NLCData) {
+  // console.warn(keywordData, NLCData)
+  return { type: types.GET_NLC_CLASSIFICATION,
+    elems: data,
+    keywords: keywordData,
+  NLCResponse: NLCData}
+}
 export function fetchProductSuccess (data) {
   // console.log('Fetch Product Success >>>>>>', data)
 
@@ -40,10 +46,19 @@ export function fetchWatsonFailure (id, error) {
 export function fetchProducts () {
   console.log('Fetching product data')
   return dispatch => {
-    return makeProductRequest('get', '', '', '/productData')
+    return makeProductRequest('post', '', {text: 'Openness'}, '/productData')
       .then(
-        (response) => dispatch(fetchProductSuccess(response.data))
+        (response) => {
+          console.log('IN  fetching products', response.data)
+          return dispatch(initEntrySuccess(response.data, 'Openness', {'classes': 'none'}))
+        }
     )
-      .catch((e) => dispatch(fetchProductFailure({ errobj: e,error: "Oops! Something went wrong and we couldn't create Persona"})))
+    //   .then(
+    //     (response) => {
+    //       dispatch(push('/Products'))
+    //     }
+    // )
+
+      .catch((e) => dispatch(initEntryFailure({ errobj: e,error: "Oops! Something went wrong and we couldn't create Search"})))
   }
 }

@@ -1,0 +1,18 @@
+.Page {
+	composes: page from '../common/layout';
+}
+.Products {
+	margin-top:500px;
+}
+.bodyText{
+	composes: bodyText from '../common/layout'
+}
+.brightDisplay{
+	opacity:1;
+}
+.dullDisplay {
+	opacity:0.6;
+}
+.Panel {
+
+}

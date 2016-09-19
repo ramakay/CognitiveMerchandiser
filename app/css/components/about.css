@@ -3,26 +3,173 @@
   text-align: center;
 }
 
+/* Top Animation */
+
+.sentence-wrapper{
+    width: 100%;
+    position: relative;
+    text-shadow: 2px 2px 7px hsla(0, 12%, 35%, 1);
+    font-size:36px;
+        transform: translateX(25%) ;
+	min-height:350px;
+font-family:comfortaa;  
+  padding: 10px;
+}
+.sentence{
+    margin: 0;
+    text-align: left;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+}
+
+.sentence span{
+    color: #444;
+    font-size: 200%;
+    font-weight: normal;
+}
+.words{
+    display: inline;
+    text-indent: 10px;
+}
+.words-1 span{
+	    text-shadow: 2px 2px 7px hsla(0, 12%, 35%, 1);
+    font-size:36px;
+        transform: translateX(25%) ;
+	min-height:350px;
+    position:relative;
+font-family:comfortaa;
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    color: #F2F2F2;
+    -webkit-animation: rotateWord 18s linear infinite 0s;
+    -moz-animation: rotateWord 18s linear infinite 0s;
+    -o-animation: rotateWord 18s linear infinite 0s;
+    -ms-animation: rotateWord 18s linear infinite 0s;
+    animation: rotateWord 18s linear infinite 0s;
+
+}
+.words-1 * {
+	min-width:780px;
+}
+.words-1 span:nth-child(2) { 
+    -webkit-animation-delay: 6s; 
+    -moz-animation-delay: 6s; 
+    -o-animation-delay: 6s; 
+    -ms-animation-delay: 6s; 
+    animation-delay: 6s; 
+    color: #F2F2F2;
+}
+.words-1 span:nth-child(3) { 
+    -webkit-animation-delay: 9s; 
+    -moz-animation-delay: 9s; 
+    -o-animation-delay: 9s; 
+    -ms-animation-delay: 9s; 
+    animation-delay: 9s; 
+    color: #F2F2F2;
+}
+.words-1 span:nth-child(4) { 
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s; 
+    -o-animation-delay: 12s; 
+    -ms-animation-delay: 12s; 
+    animation-delay: 12s; 
+    color: #F2F2F2;
+}
+.words-1 span:nth-child(5) { 
+    -webkit-animation-delay: 15s; 
+    -moz-animation-delay: 15s; 
+    -o-animation-delay: 15s; 
+    -ms-animation-delay: 15s; 
+    animation-delay: 15s; 
+    color: #F2F2F2;
+}
+.words-1 span:nth-child(6) { 
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s; 
+    -o-animation-delay: 18s; 
+    -ms-animation-delay: 18s; 
+    animation-delay: 18s; 
+    color: #F2F2F2;
+}
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); }
+    20% { opacity: 0; -webkit-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -moz-transform: translateY(-30px); }
+    5% { opacity: 1; -moz-transform: translateY(0px);}
+    17% { opacity: 1; -moz-transform: translateY(0px); }
+    20% { opacity: 0; -moz-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-o-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -o-transform: translateY(-30px); }
+    5% { opacity: 1; -o-transform: translateY(0px);}
+    17% { opacity: 1; -o-transform: translateY(0px); }
+    20% { opacity: 0; -o-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -ms-transform: translateY(-30px); }
+    5% { opacity: 1; -ms-transform: translateY(0px);}
+    17% { opacity: 1; -ms-transform: translateY(0px); }
+    20% { opacity: 0; -ms-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; transform: translateY(-30px); }
+    5% { opacity: 1; transform: translateY(0px);}
+    17% { opacity: 1; transform: translateY(0px); }
+    20% { opacity: 0; transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+
 .description {
   composes: normal from '../common/typography';
   width:100vw;
-height:100%;
+height:100vh;
 }
 
 .description video {
-    position: absolute;
+    /*position: absolute;
     left: 50%;
     min-width: 100vw;
     width: auto;
     z-index: 0;
     margin-top:40px;
-    top:350px;
+    top:300px;
+    min-height:100vh;
     height:100%;
+        object-fit: cover;
+
     transform: translateX(-50%) translateY(-42%);
  background: url('http://res.cloudinary.com/drjw5ga79/video/upload/v1473470889/My_Movie_torstp.jpg') no-repeat;
   background-size: cover;
-  transition: 1s opacity;
+  transition: 1s opacity;*/
+   width: 100vw; /* Could also use width: 100%; */
+    height: 100vh;
+    object-fit: cover;
+    position: absolute; /* Change position to absolute if you don't want it to take up the whole page */
+    left: 0px;
+    top: 0px;
+    z-index: 0;
 }
+
 .contribute {
   composes: small from '../common/typography';
 }
@@ -35,26 +182,24 @@ height:100%;
     height:100%;*/
   display: inline-block;
     height: 100%;
-    margin-top:350px;
+    margin-top:50vh;
     width: 100%;
-    text-shadow: 2px 2px 7px rgba(78, 78, 78, 1);
+    text-shadow: 6px 6px 7px hsla(0, 12%, 35%, 1);
     font-size:36px;
         transform: translateX(25%) ;
 	min-height:350px;
     position:relative;
+font-family:comfortaa;
 
 }
 .description h2:after {
 	background:#000;
 	opacity: 0.5;
 }
-.bodyText{
-	background:#fff;
-	width:100vw;
-	height:100vh;
-	position:relative;
-	padding:2.5rem;
+.description h2 a{
+	color:#fff;
 }
+
 .card-grey {
 	  composes: media-object from '../common/foundation.min';
 
@@ -62,6 +207,9 @@ height:100%;
 	padding:15px;
 	width:100vh;
 	background:#3B424C;
+}
+section {
+	margin-top:15px;
 }
 .card-grey h2 {
 	color:#fff;
@@ -72,23 +220,29 @@ height:100%;
 	width:100vh;
 	background:#f3f3f3;
 }
-h3.graf--startsWithDoubleQuote {
-    text-indent: -.415em;
+.bodyText {
+	composes: bodyText from '../common/layout';
 }
-.graf--h3 {
-    margin-top: 53px;
-}
-.graf--h3 {
-    font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 32px;
+
+.headingQuoteLine {
+	composes: playfair from '../common/typography';
+    
+    font-family:playfair !important;
+    margin:15px 0 15px 0;
+    font-style: italic;
+    color:hsla(0, 0%, 80%, 1);
+    font-size: 48px;
     margin-left: -2px;
     line-height: 1.15;
+    font-family:Playfair;
     letter-spacing: -.02em;
 }
-.graf--h2, .graf--h3, .graf--h4 {
-    color: rgba(0,0,0,.8);
+
+.messageTitle {
+  background:hsla(60, 100%, 10%, 0.2);
+  float:left;
+  color:red;
 }
-
-
+footer {
+	color:#fff;
+}

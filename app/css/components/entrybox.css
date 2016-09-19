@@ -12,7 +12,8 @@
 .input {
   composes: heading from '../common/typography';
   composes: input from '../common/input';
-
+  height:600px;
+word-break: break-all;
   text-align: center;
   outline: none;
 }

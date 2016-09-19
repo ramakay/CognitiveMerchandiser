@@ -15,16 +15,29 @@ const About = () => {
       <div className={cx('description')}>
     <div className={cx('shade')}>        
       <video muted autoPlay  poster="http://res.cloudinary.com/drjw5ga79/video/upload/v1473470889/My_Movie_torstp.jpg">
-  <source src="http://res.cloudinary.com/drjw5ga79/video/upload/v1473470889/My_Movie_torstp.mp4" type="video/mp4"/>
+  <source src="http://res.cloudinary.com/drjw5ga79/video/upload/vc_auto/v1473470889/My_Movie_torstp.mp4" type="video/mp4"/>
 </video>
 </div>
-            <h2> Can Cognition help with your next sale? </h2>
-
+<div className={cx('messageTitle')}>
+<div className={cx('sentence-wrapper')} >
+                <h2 className={cx('sentence')}>
+                    <div className={cx('words-1')}>
+                    <a href="#start">
+                        <span>Can Cognition help with your next sale?</span>
+                        <span>Can Interfaces be built by themselves?</span>
+                        <span>Will ethnographic Research lead to Cognitive Systems? </span>
+                        <span>Can you train customers through Reinforcement learning?</span>
+                        <span>Click to find out!</span>
+                        
+                        </a>
+                    </div>
+                </h2>
+            </div></div>
 
       </div>
           <div className={cx('bodyText')}>
-  <section>
-<h3 className={cx('headingQuote')} >      When we develop or merchandise in any Digital experience today, we assume what works based on existing patterns and expertise.  </h3>
+  <section id="start">
+<blockquote >      When we develop or merchandise in any Digital experience today, we assume what works based on existing patterns and expertise.  </blockquote>
 
 <p>This produced work is largely a set of rules categorized as structured web experiences. Furthermore, people developing such experiences (Websites, Web Applications ) may have trained themselves into assuming will follow one of the many user journey’s they have assumed. One example is the prevalence of a secondary "Add to Wishlist" button next to an "Add to Cart" button.
 
@@ -43,13 +56,15 @@ We “Personalize” certain aspects of the experience as a programmatic system 
 When you visit a website you are interacting with a piece of work that is created weeks if not months in advance with assumptions around the users interacting with them - The rules are definite and cannot be broken.
 </section>
 <section>
-<h1>A Proposed model to map real-time user intents to probabilistic user interface elements.</h1>
+<blockquote >A Proposed model and a Reference Implementation to map real-time user intents to probabilistic user interface elements.</blockquote>
 
-<h2> A Reference implementation </h2>
 <p> The Cognitive merchandiser works on the premise that Digital experiences whether implemented as a retail storefront or a content based website can all work on the basis of cognition. </p>
 
 <p>It proposes change in roles:</p>
-
+<h3>The Consumer</h3>
+<ul>
+  <li>Is training a System to respond to their needs without bias from merchandisers and other humans </li>
+</ul>
 <h3>The User Experience Researcher. </h3>
 <p>The User Experience Researcher or others collecting ethnographic research is essentially creating base training data for a future cognitive system. User experience Research usually helps produce a brief for the user experience. A Base guideline which may contain personas can be added as a base framework for the system. In the reference implementation, it is the Brand Insight section. </p>
 
@@ -66,13 +81,38 @@ When you visit a website you are interacting with a piece of work that is create
   <li>Dynamic Interface components that influence not only layout but component behavior based on the input fro the Reinforcement learning module. </li>
 </ul>
 
-<p>Of these, the Reference implementation currently demonstrates </p>
-<ul>
-  <li>Brand Brief - To establish the base set of Personality Attributes based </li>
-  <li>Search – The start of an incoming Natural Language Classifier that tries to guess intents.</li>
-  <li>Product Pages – That show behavior ( Scaled product tiles using a Masonry Layout ) based on incoming reinforcement learning input.</li>
-</ul>
 
+<h3>The Marketer</h3>
+<ul>
+  <li>Validates the brief produced by the experience </li>
+  <li>Monitors Sale and scores Cognitive patterns that lead to sales. Roadmap Item:</li>
+  <li>Watches realtime as the Merchandiser provides Recommendation - Roadmap Item: </li>
+</ul>
+<h3>The System</h3>
+<ul>
+  <li> Starts as a basic cognitive system with no awareness of surroundings </li>
+  <li> Eventually utilizes Reinforcement learning and strengthens personas to individual user sessions </li>
+  <li> Continues to use Re-inforcement learning to build a policy network to strengthen base persona </li>
+</ul>
+<blockquote >How this Application works </blockquote>
+<ul>
+  <li>Navigate to <a href="/Persona">Persona Definition</a> and provide an Explanation of who you think the target audience is - A Sample is provided . The service returns Personality attributes and confidence levels <strong> This shapes the unknown user experience </strong>  </li>
+  <li>Navigate to <a href="/Search">Search</a> to emulate the role of a customer during an incoming visit - The system accounts for this input and varies the Persona attribute confidence level 
+        <ul>
+            <li> The system uses Natural Language Processing (NLC) to understand intents behind the search term , try varied terms such as "Mens Polo Shirt" or "Sharp Dressing" </li>
+          </ul>
+    </li>
+  <li> Scroll to the end of both the <a href="/Persona">Persona Definition</a> and <a href="/Search">Search</a> to observe API Response  </li>
+</ul>
+<blockquote >How this Application works </blockquote>
+<ul>
+  <li>Navigate to <a href="/Persona">Persona Definition</a> and provide an Explanation of who you think the target audience is - A Sample is provided . The service returns Personality attributes and confidence levels <strong> This shapes the unknown user experience </strong>  </li>
+  <li>Navigate to <a href="/Search">Search</a> to emulate the role of a customer during an incoming visit - The system accounts for this input and varies the Persona attribute confidence level 
+        <ul>
+            <li> The system uses Natural Language Processing (NLC) to  </li>
+          </ul>
+    </li>
+</ul>
 
 <h3> Where to next and how you can contribute. </h3>
 <p>The project is open sourced to strengthen the cognitive Algorithms to predict and interact on user experiences better.</p>
@@ -83,7 +123,7 @@ When you visit a website you are interacting with a piece of work that is create
 
     </div>
     <footer>
-      &copy; 2016 Cognitive Merchandiser
+     finiš  &copy; 2016 Cognitive Merchandiser <img src="https://api.travis-ci.org/ramakay/CognitiveMerchandiser.svg" />
     </footer>
   </div>
   );

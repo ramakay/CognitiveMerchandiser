@@ -4,15 +4,33 @@ import Products from '../models/products'
 /**
  * List
  */
+export function fetchProductsPost (req, res) {
+  // console.log('You sent....this text', req.body, req.body.text)
+  // console.log('This query', {Personality: req.body.text }, {products: 1,  _id: 0})
+  // Products.find({Personality: req.body.text }, {products: 1,  _id: 0}).limit(100).exec((err, products) => {
+  Products.find({}, {products: { $slice: 2 },_id: 0}).sort({rank: 1}).limit(500).exec((err, products) => {
+    // console.log('Query returned...', products, req.body.text, typeof req.body.text)
+    if (err) {
+      console.log('Error in first query', err)
+      return res.status(200).send('Something went wrong getting the data')
+    }
+    return res.json(products)
+  })
+}
+
 export function fetchProducts (req, res) {
   // console.log('in FETCHPRODUCTS', Products.find({products: { $regex: /[0-9]/}}))
   // Products.find({products: { $regex: /[0-9]/}}).limit(5).exec((err, products) => {
   // {"products":1, "_id":0} 
-  Products.find({}, {products: { $slice: 2 },_id: 0}).limit(100).exec((err, products) => {
+
+  console.log('You sent....', req.text, typeof req.text)
+  Products.find({'personality': req.text}, {products: { $slice: 2 },_id: 0}).sort({name: 1}).limit(500).exec((err, products) => {
+    // Products.find({}, {products: { $slice: 2 },_id: 0}).limit(100).exec((err, products) => {
     if (err) {
       console.log('Error in first query', err)
       return res.status(500).send('Something went wrong getting the data')
     }
+    console.log(products.length)
     return res.json(products)
   })
 }
@@ -80,6 +98,7 @@ export function remove (req, res) {
 
 export default {
   fetchProducts,
+  fetchProductsPost,
   add,
   update,
 remove}

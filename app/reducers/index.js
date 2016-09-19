@@ -4,6 +4,7 @@ import topic from 'reducers/topic'
 import message from 'reducers/message'
 import persona from 'reducers/persona'
 import products from 'reducers/product'
+import search from 'reducers/search'
 
 import { routerReducer as routing } from 'react-router-redux'
 
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   message,
   routing,
   persona,
-products})
+  products,
+search})
 
 export default rootReducer

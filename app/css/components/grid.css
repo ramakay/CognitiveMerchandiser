@@ -6,3 +6,9 @@
     list-style: none;
     min-width:240px;
   }
+:global .brightDisplay{
+	opacity:1;
+}
+:global .dullDisplay {
+	opacity:0.6;
+}

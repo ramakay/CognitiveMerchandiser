@@ -1,0 +1,22 @@
+
+.sampleBrief{
+	height:600px;
+	overflow-y:scroll;
+	composes: bodyText from '../common/layout';
+	width:80%;
+font-size:12px;
+margin:0 auto;
+}
+.Persona {
+		composes: bodyText from '../common/layout';
+
+}
+.InsightResponse {
+	border:1px dotted #ccc;
+}
+.Page {
+	composes: page from '../common/layout';
+}
+.Usage {
+	font-style:italic;
+}
