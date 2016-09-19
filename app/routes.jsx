@@ -9,6 +9,7 @@ import Dashboard from 'containers/Dashboard'
 import Persona from 'containers/Persona'
 import Products from 'containers/Products'
 import SearchEngine from 'containers/SearchEngine'
+import {fetchProducts} from 'actions/products'
 
 /*
  * @param {Redux Store}
@@ -35,6 +36,18 @@ export default (store) => {
       })
     }
     callback()
+  } 
+    const requireGridData = (nextState, replace, callback) => {
+    const { products: { elems }} = store.getState()
+    if (!elems) {
+      console.log("No elems found");
+      fetchProducts()
+      // replace({
+      //   pathname: '/login',
+      //   state: { nextPathname: nextState.location.pathname }
+      // })
+    }
+    callback()
   }
   return (
   <Route path="/" component={App}>
@@ -43,7 +56,7 @@ export default (store) => {
     <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
     <Route path="about" component={About} />
     <Route path="Persona" component={Persona} />
-    <Route path="Products" component={Products} />
+    <Route path="Products" component={Products} onEnter={requireGridData} />
     <Route path="Search" component={SearchEngine} />
   </Route>
   )

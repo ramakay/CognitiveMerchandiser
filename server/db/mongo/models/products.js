@@ -7,7 +7,8 @@ import mongoose from 'mongoose'
 const ProductSchema = new mongoose.Schema({
   id: String,
   name: String,
-  price: { type: Number, min: 0 }
+  price: { type: Number, min: 0 },
+  Personality: String
 }, {collection: 'ProductDataFinal'})
 
 // Compiles the schema into a model, opening (or creating, if

@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 // to grandchild. To make it cleaner, you could consider:
 // 1. moving `connect` down to this component so you could mapStateToProps and dispatch
 // 2. Move TopicTextInput up to EntryBox so it's less confusing
-const EntryBox = ({onEntryChange, onEntrySave, topic}) => {
+const EntryBox = ({onEntryChange, onEntryClick,onEntrySave, topic}) => {
   return (
     <div className={cx('entrybox')}>
       <TopicTextInput
@@ -18,7 +18,10 @@ const EntryBox = ({onEntryChange, onEntrySave, topic}) => {
         value={topic}
         placeholder="Enter the Brand Brief"
         onEntryChange={onEntryChange}
-        onEntrySave={onEntrySave} />
+        onEntrySave={onEntrySave}
+        onEntryClick={onEntryClick}
+         />
+        
     </div>
   );
 };
@@ -26,7 +29,8 @@ const EntryBox = ({onEntryChange, onEntrySave, topic}) => {
 EntryBox.propTypes = {
   topic: PropTypes.string,
   onEntryChange: PropTypes.func.isRequired,
-  onEntrySave: PropTypes.func.isRequired
+  onEntrySave: PropTypes.func.isRequired,
+  onEntryClick:PropTypes.func.isRequired
 };
 
 export default EntryBox;

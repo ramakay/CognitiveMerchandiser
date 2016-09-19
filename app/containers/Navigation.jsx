@@ -22,7 +22,6 @@ const Navigation = ({ user, logOut }) => {
                                                            <Link className={cx('item')} to="/Persona"><sub>01.</sub> Persona</Link>
                     <Link className={cx('item')} to="/Search"><sub>02.</sub>Search</Link>
 
-                                       <a  className={cx('item')} href="/Products"><sub>03</sub> Products </a>
       </nav>
 </div>
     );

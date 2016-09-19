@@ -70,6 +70,7 @@ export default (app) => {
     console.warn(unsupportedMessage('Persona routes'))
   }
   if (productController) {
+    app.post('/productData', productController.fetchProductsPost)
     app.get('/productData', productController.fetchProducts)
   } else {
     console.warn(unsupportedMessage('topics routes'))

@@ -91,15 +91,28 @@ When you visit a website you are interacting with a piece of work that is create
 <h3>The System</h3>
 <ul>
   <li> Starts as a basic cognitive system with no awareness of surroundings </li>
-  <li> Eventually utilizes Reinforcement learning and strengthens personas to people </li>
+  <li> Eventually utilizes Reinforcement learning and strengthens personas to individual user sessions </li>
+  <li> Continues to use Re-inforcement learning to build a policy network to strengthen base persona </li>
 </ul>
 <blockquote >How this Application works </blockquote>
 <ul>
   <li>Navigate to <a href="/Persona">Persona Definition</a> and provide an Explanation of who you think the target audience is - A Sample is provided . The service returns Personality attributes and confidence levels <strong> This shapes the unknown user experience </strong>  </li>
-  <li>Navigate to <a href="/Search">Search</a> to emulate the role of a customer during an incoming visit - The system accounts for this input and varies the Persona attribute confidence level </li>
-  <li>Navigate to <a href="/Products">Products </a> When arrived direclty, the system assumes the base Persona and proceeds to propose certain products ( Observer any sized up Tiles ) </li>
+  <li>Navigate to <a href="/Search">Search</a> to emulate the role of a customer during an incoming visit - The system accounts for this input and varies the Persona attribute confidence level 
+        <ul>
+            <li> The system uses Natural Language Processing (NLC) to understand intents behind the search term , try varied terms such as "Mens Polo Shirt" or "Sharp Dressing" </li>
+          </ul>
+    </li>
+  <li> Scroll to the end of both the <a href="/Persona">Persona Definition</a> and <a href="/Search">Search</a> to observe API Response  </li>
 </ul>
-
+<blockquote >How this Application works </blockquote>
+<ul>
+  <li>Navigate to <a href="/Persona">Persona Definition</a> and provide an Explanation of who you think the target audience is - A Sample is provided . The service returns Personality attributes and confidence levels <strong> This shapes the unknown user experience </strong>  </li>
+  <li>Navigate to <a href="/Search">Search</a> to emulate the role of a customer during an incoming visit - The system accounts for this input and varies the Persona attribute confidence level 
+        <ul>
+            <li> The system uses Natural Language Processing (NLC) to  </li>
+          </ul>
+    </li>
+</ul>
 
 <h3> Where to next and how you can contribute. </h3>
 <p>The project is open sourced to strengthen the cognitive Algorithms to predict and interact on user experiences better.</p>

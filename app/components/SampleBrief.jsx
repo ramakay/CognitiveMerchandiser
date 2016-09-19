@@ -18,6 +18,8 @@ const SampleBrief = ({}) => {
   );
 };
 
-
+SampleBrief.propTypes = {
+   briefCollapsed:PropTypes.bool
+};
 
 export default SampleBrief;

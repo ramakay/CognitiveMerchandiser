@@ -7,14 +7,14 @@ const cx = classNames.bind(styles);
 //data-packery-options='{ "gutter": ".gutter-sizer", "itemSelector": ".item", "columnWidth": ".grid-sizer", "rowHeight": ".item" }
 var packeryOptions = {
   transitionDuration: '0.5s',
-  columnWidth:300
+  columnWidth:600
 };
 const Grid = ({elems,keywords}) => {
   const childElements = elems.map((element, i) => {
    // console.log("ELEMENT", element)
     var tileVariations = element.colors[0] ? element.colors[0].split("|")[2] : null
     var tilePersonality = element.Personality;
-    console.log(tilePersonality)
+    //console.log(tilePersonality)
     console.log(tilePersonality,keywords);
     // This varies based on action.
     let imgSrc,
@@ -24,8 +24,8 @@ const Grid = ({elems,keywords}) => {
     clss
     if(tilePersonality === keywords) {
       imgSrc =  "http://www.ralphlauren.com/graphics/product_images/pPOLO2-" + tileVariations + "_standard_t940.jpg" 
-      imgWidth = 400;
-      imgHeight = 400;
+      imgWidth = 320;
+      imgHeight = 320;
       cstyle = {opacity:1};
       clss='Bright'
     }
@@ -43,7 +43,7 @@ const Grid = ({elems,keywords}) => {
     //console.log(imgSrc)
     return (
       <li key={i} className={cx('productTile')}>
-                              <img className={cx(clss)} style={cstyle} onError={(e)=>{e.target.style.display='none'}} width= {imgWidth} height= {imgHeight} key={i} alt={tilePersonality} src={imgSrc}  />
+                              <img className={cx({clss})} style={cstyle} onError={(e)=>{e.target.style.display='none'}} width= {imgWidth} height= {imgHeight} key={i} alt={tilePersonality} src={imgSrc}  />
 
                 </li>
       );

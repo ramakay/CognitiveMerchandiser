@@ -7,3 +7,12 @@
 .bodyText{
 	composes: bodyText from '../common/layout'
 }
+.brightDisplay{
+	opacity:1;
+}
+.dullDisplay {
+	opacity:0.6;
+}
+.Panel {
+
+}

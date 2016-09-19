@@ -15,11 +15,12 @@ export default class SearchInput extends Component {
    * Invokes the callback passed in as onSave, allowing this component to be
    * used in different ways. I personally think this makes it more reusable.
    */
-  onSave () {
-    console.log(event.target.value)
+  onSave (event) {
+   // console.warn(event.target.value)
     const { onEntrySearch } = this.props
 
     let value = value ? value : this.refs.myInput.value
+    console.log(value)
     onEntrySearch(value)
   }
 

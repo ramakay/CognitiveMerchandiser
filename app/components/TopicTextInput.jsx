@@ -7,6 +7,7 @@ export default class TopicTextInput extends Component {
     this.onSave = this.onSave.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onKeyDown = this.onKeyDown.bind(this);
+
   }
   /*
    * Invokes the callback passed in as onSave, allowing this component to be
@@ -14,11 +15,18 @@ export default class TopicTextInput extends Component {
    */
   onSave() {
     // console.log("TEXTBOX VAL",this.refs.myInput.value)
-    const { onEntrySave } = this.props;
+    const { onEntrySave,onEntryClick } = this.props;
     let value= value ? value: this.refs.myInput.value
     onEntrySave(value);
+    onEntryClick()
+
   }
 
+  onEntryClickAction() {
+    // console.log("TEXTBOX VAL",this.refs.myInput.value)
+    const { onEntryClick } = this.props;
+    this.onEntryClick();
+  }
   /*
    * Invokes the callback passed in as onSave, allowing this component to be
    * used in different ways. I personally think this makes it more reusable.
@@ -33,8 +41,8 @@ export default class TopicTextInput extends Component {
    */
   onKeyDown(event) {
     if (event.keyCode === ENTER_KEY_CODE) {
-
       this.onSave();
+      this.onEntryClickAction();
     }
   }
 
@@ -63,5 +71,6 @@ TopicTextInput.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.string,
   onEntrySave: PropTypes.func,
+  onEntryClick: PropTypes.func,
   onEntryChange: PropTypes.func
 };

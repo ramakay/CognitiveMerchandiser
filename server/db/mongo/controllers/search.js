@@ -20,7 +20,7 @@ export function fetchClassification (req, res, next) {
       console.log('The error was', err)
       return next(err)
     } else {
-      console.log('The results are ', results)
+      // console.log('The results are ', results)
       res.json(results)
     }
   })

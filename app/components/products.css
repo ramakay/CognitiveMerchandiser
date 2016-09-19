@@ -1,6 +1,0 @@
-.Page {
-	composes: page from '../common/layout';
-}
-.Search {
-	margin-top:500px;
-}
