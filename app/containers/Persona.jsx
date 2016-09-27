@@ -64,7 +64,7 @@ class Persona extends Component {
       The System expects free flowing text much like a brand brief that will be narrated to a team member.
       </p>
             <div className={cx('Usage')}> A Sample for a Persona "Alpha Male" is provided below, either provide your own 8000 words or copy/paste the below text area and press "Save" </div>
-
+  <strong className={cx('warn')}> Please ensure supplied text is wrapped in &quot;&quot; </strong>
 
       <div className={cx('Persona')}>
         <EntryBox topic={newTopic}
