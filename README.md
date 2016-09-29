@@ -52,10 +52,8 @@ The Cognitive App  is considered a succcess if:
 Everything is wired up using the NodeJS SDK for Watson Cloud.
 Actions, Reducers are all wired in and respond to changees.
 
-##Issues
-Right now in its Pre-alpha stage, all it does is the ability to input a brand brief and pass it on to a ML Api to get a JSON confidence level back on type of persona and intents that get weighed higher.
-
-A Sample _AlphaMale.md_ exists in the app folder. 
+#Boiler plate credits
+React-Go for the Base React, Redux and Express Architecture: https://github.com/reactGo/reactGo 
 
 
 
