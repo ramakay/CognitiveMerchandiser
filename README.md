@@ -55,6 +55,8 @@ Actions, Reducers are all wired in and respond to changees.
 #Boiler plate credits
 React-Go for the Base React, Redux and Express Architecture: https://github.com/reactGo/reactGo 
 
-
+#Roadmap
+Re-inforcement learning using Pavlov
+https://github.com/nathanEpstein/pavlov.js 
 
 
