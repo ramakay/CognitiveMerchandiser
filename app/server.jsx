@@ -17,6 +17,18 @@ const clientConfig = {
 axios.defaults.baseURL = `http://${clientConfig.host}:${clientConfig.port}`;
 
 
+/*
+ * To Enable Google analytics simply replace the hashes with your tracking ID
+ * and move the constant to above the analtyicsScript constant.
+ *
+ * Currently because the ID is declared beneath where is is being used, the
+ * declaration will get hoisted to the top of the file.
+ * however the assignement  does not, so it is undefined for the type check above.
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
+ */
+const trackingID  = "UA-86655312-1";
+
+
 const analtyicsScript =
   typeof trackingID === "undefined" ? ``
   :
@@ -30,16 +42,7 @@ const analtyicsScript =
   </script>`;
 
 
-/*
- * To Enable Google analytics simply replace the hashes with your tracking ID
- * and move the constant to above the analtyicsScript constant.
- *
- * Currently because the ID is declared beneath where is is being used, the
- * declaration will get hoisted to the top of the file.
- * however the assignement  does not, so it is undefined for the type check above.
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
- */
-const trackingID  = "UA-86655312-1";
+
 
 
 
