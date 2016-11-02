@@ -26,7 +26,7 @@ axios.defaults.baseURL = `http://${clientConfig.host}:${clientConfig.port}`;
  * however the assignement  does not, so it is undefined for the type check above.
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
  */
-const trackingID  = "UA-86655312-1";
+const trackingID  = "'UA-86655312-1'";
 
 
 const analtyicsScript =
