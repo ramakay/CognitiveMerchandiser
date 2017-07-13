@@ -56,7 +56,7 @@
     "sinon": "^1.17.3"
   },
   "engines": {
-    "node": "5.x"
+    "node": "6.x"
   },
   "dependencies": {
     "autoprefixer": "^6.3.3",
